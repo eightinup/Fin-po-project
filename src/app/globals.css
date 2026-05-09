@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #05070a;
+  --foreground: #eef2f6;
+  --card: #0a0e13;
+  --card-foreground: #eef2f6;
+  --popover: #0a0e13;
+  --popover-foreground: #eef2f6;
+  --primary: #54f29f;
+  --primary-foreground: #041109;
+  --secondary: #121820;
+  --secondary-foreground: #eef2f6;
+  --muted: #111720;
+  --muted-foreground: #8a96a8;
+  --accent: #1ad7c6;
+  --accent-foreground: #02100f;
+  --destructive: #fb7185;
+  --destructive-foreground: #fff7f8;
+  --border: #1d2733;
+  --input: #1d2733;
+  --ring: #54f29f;
+  --chart-1: #54f29f;
+  --chart-2: #1ad7c6;
+  --chart-3: #f8c14a;
+  --chart-4: #fb7185;
+  --chart-5: #8eb8ff;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background:
+    linear-gradient(180deg, rgba(10, 14, 19, 0.96), #05070a 42%),
+    linear-gradient(90deg, rgba(84, 242, 159, 0.08), transparent 28%, rgba(26, 215, 198, 0.08));
+  color: var(--foreground);
+}
+
+body::selection {
+  background: rgba(84, 242, 159, 0.28);
+  color: #ffffff;
+}
+
+button,
+a,
+input,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.terminal-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.market-scanline {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(84, 242, 159, 0.06),
+    transparent
+  );
+}
